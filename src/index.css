@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   1. FONT DECLARATIONS (RELATIVE TO SRC)
+   ========================================================================== */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("./assets/font/cormorant-garamond.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("./assets/font/cormorant-garamond-italic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/font/Inter.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/font/Inter-italic.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   2. TAILWIND V4 THEME CONFIGURATION
+   ========================================================================== */
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --color-near-black: #050505;
+  --color-soft-black: #0d0d0c;
+  --color-warm-ivory: #f8f4ed;
+  --color-cream-surface: #fffdf9;
+  --color-burnt-orange: #d9471e;
+  --color-muted-orange: #b85a3a;
+
+  --color-text-primary: #111111;
+  --color-text-secondary: #5f5a55;
+  --color-text-muted: #8a8580;
+
+  --color-border-light: #e5ddd4;
+  --color-border-dark: #2a2a28;
+  --color-success-soft-green: #eaf4ea;
+}
+
+/* ==========================================================================
+   3. GLOBAL BASE STYLES & CUSTOM UTILITIES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  @apply font-sans bg-warm-ivory text-text-primary;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  @apply font-serif;
+}
+
+p {
+  margin: 0;
+}
+
+button, input, textarea, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.serif {
+  @apply font-serif;
+}
+
+.sans {
+  @apply font-sans;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  @apply font-sans text-burnt-orange;
+}

@@ -1,14 +1,19 @@
+import Footer from "../components/layout/footer";
+import GalleryGrid from "../components/sections/gallery/gallery-grid";
+import GalleryHero from "../components/sections/gallery/gallery-hero";
+import GalleryReservationCTA from "../components/sections/gallery/gallery-reservation-cta";
+
 const Gallery = () => {
   return (
-    <main className="min-h-screen bg-warm-ivory px-4 py-10 text-text-primary">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
-        Ember &amp; Sage
-      </p>
+    <>
+      <main className="bg-warm-ivory text-text-primary">
+        <GalleryHero />
+        <GalleryGrid />
+        <GalleryReservationCTA />
+      </main>
 
-      <h1 className="mt-4 font-serif text-[48px] leading-[0.95] tracking-[-0.03em]">
-        Gallery
-      </h1>
-    </main>
+      <Footer />
+    </>
   );
 };
 

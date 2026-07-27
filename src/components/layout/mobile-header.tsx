@@ -1,5 +1,6 @@
 import { Menu, ShoppingBag } from "lucide-react";
 import Button from "../ui/button";
+import { Link } from "react-router-dom";
 
 type MobileHeaderProps = {
   cartCount?: number;
@@ -20,9 +21,11 @@ const MobileHeader = ({
 
       <div className="flex items-center gap-2.5">
         {showOrderButton ? (
-          <Button variant="outline-light" size="sm">
-            Order Online →
-          </Button>
+          <Link to="/cart">
+            <Button variant="outline-light" size="sm">
+              Order Online →
+            </Button>
+          </Link>
         ) : (
           <button
             type="button"

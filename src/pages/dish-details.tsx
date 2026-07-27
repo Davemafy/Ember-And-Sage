@@ -185,10 +185,12 @@ const DishDetails = () => {
             </div>
 
             <div className="mt-6">
-              <Button fullWidth>
-                <Plus size={18} />
-                Add to Cart
-              </Button>
+              <Link to="/cart">
+                <Button fullWidth>
+                  <Plus size={18} />
+                  Add to Cart
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

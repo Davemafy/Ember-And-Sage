@@ -68,11 +68,15 @@ const MobileDrawer = ({ isOpen, onClose }: MobileDrawerProps) => {
           })}
 
           <div className="mt-8 space-y-4">
-            <Button fullWidth>Reserve Your Table</Button>
+            <Link to="/reservations" onClick={onClose}>
+              <Button fullWidth>Reserve Your Table</Button>
+            </Link>
 
-            <Button variant="outline-light" fullWidth>
-              Order Online
-            </Button>
+            <Link to="/cart" onClick={onClose}>
+              <Button variant="outline-light" fullWidth>
+                Order Online
+              </Button>
+            </Link>
 
             <div className="flex items-center gap-3 pt-4">
               <button className="grid h-10 w-10 place-items-center rounded-full border border-warm-ivory/25"></button>

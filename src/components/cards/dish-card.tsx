@@ -62,13 +62,13 @@ const DishCard = ({
             ))}
           </div>
 
-          <button
-            type="button"
+          <Link
+            to="/cart"
             aria-label={`Add ${name} to cart`}
             className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-burnt-orange text-burnt-orange"
           >
             <Plus size={18} />
-          </button>
+          </Link>
         </div>
       </div>
     </article>

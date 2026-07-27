@@ -1,14 +1,21 @@
+import Footer from "../components/layout/footer";
+import ContactDetails from "../components/sections/contact/contact-details";
+import ContactForm from "../components/sections/contact/contact-form";
+import ContactHero from "../components/sections/contact/contact-hero";
+import ContactMapCTA from "../components/sections/contact/contact-map-cta";
+
 const Contact = () => {
   return (
-    <main className="min-h-screen bg-warm-ivory px-4 py-10 text-text-primary">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
-        Ember &amp; Sage
-      </p>
+    <>
+      <main className="bg-warm-ivory text-text-primary">
+        <ContactHero />
+        <ContactDetails />
+        <ContactForm />
+        <ContactMapCTA />
+      </main>
 
-      <h1 className="mt-4 font-serif text-[48px] leading-[0.95] tracking-[-0.03em]">
-        Contact
-      </h1>
-    </main>
+      <Footer />
+    </>
   );
 };
 

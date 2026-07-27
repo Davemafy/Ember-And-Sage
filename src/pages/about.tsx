@@ -1,14 +1,21 @@
+import Footer from "../components/layout/footer";
+import AboutChef from "../components/sections/about/about-chef";
+import AboutHero from "../components/sections/about/about-hero";
+import AboutStory from "../components/sections/about/about-story";
+import AboutValues from "../components/sections/about/about-values";
+
 const About = () => {
   return (
-    <main className="min-h-screen bg-warm-ivory px-4 py-10 text-text-primary">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
-        Ember &amp; Sage
-      </p>
+    <>
+      <main className="bg-warm-ivory text-text-primary">
+        <AboutHero />
+        <AboutStory />
+        <AboutValues />
+        <AboutChef />
+      </main>
 
-      <h1 className="mt-4 font-serif text-[48px] leading-[0.95] tracking-[-0.03em]">
-        About
-      </h1>
-    </main>
+      <Footer />
+    </>
   );
 };
 

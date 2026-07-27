@@ -1,14 +1,23 @@
+import Footer from "../components/layout/footer";
+import CartHero from "../components/sections/cart/cart-hero";
+import CartItems from "../components/sections/cart/cart-items";
+import CartRecommendations from "../components/sections/cart/cart-recommendations";
+import CartSummary from "../components/sections/cart/cart-summary";
+import CartTrustStrip from "../components/sections/cart/cart-trust-strip";
+
 const Cart = () => {
   return (
-    <main className="min-h-screen bg-warm-ivory px-4 py-10 text-text-primary">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
-        Ember &amp; Sage
-      </p>
+    <>
+      <main className="bg-warm-ivory text-text-primary">
+        <CartHero />
+        <CartItems />
+        <CartSummary />
+        <CartTrustStrip />
+        <CartRecommendations />
+      </main>
 
-      <h1 className="mt-4 font-serif text-[48px] leading-[0.95] tracking-[-0.03em]">
-        Cart
-      </h1>
-    </main>
+      <Footer />
+    </>
   );
 };
 

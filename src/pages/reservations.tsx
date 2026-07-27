@@ -1,14 +1,19 @@
+import Footer from "../components/layout/footer";
+import ReservationBookingCard from "../components/sections/reservations/reservation-booking-card";
+import ReservationTimes from "../components/sections/reservations/reservation-times";
+import ReservationsHero from "../components/sections/reservations/reservations-hero";
+
 const Reservations = () => {
   return (
-    <main className="min-h-screen bg-warm-ivory px-4 py-10 text-text-primary">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
-        Ember &amp; Sage
-      </p>
+    <>
+      <main className="bg-warm-ivory text-text-primary">
+        <ReservationsHero />
+        <ReservationBookingCard />
+        <ReservationTimes />
+      </main>
 
-      <h1 className="mt-4 font-serif text-[48px] leading-[0.95] tracking-[-0.03em]">
-        Reservations
-      </h1>
-    </main>
+      <Footer />
+    </>
   );
 };
 

@@ -1,15 +1,21 @@
+import Footer from "../components/layout/footer";
+import CheckoutDeliveryMethod from "../components/sections/checkout/checkout-delivery-method";
+import CheckoutDetailsForm from "../components/sections/checkout/checkout-details-form";
+import CheckoutHero from "../components/sections/checkout/checkout-hero";
+
 const Checkout = () => {
   return (
-    <main className="min-h-screen bg-warm-ivory px-4 py-10 text-text-primary">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
-        Ember &amp; Sage
-      </p>
+    <>
+      <main className="bg-warm-ivory text-text-primary">
+        <CheckoutHero />
+        <CheckoutDeliveryMethod />
+        <CheckoutDetailsForm />
+      </main>
 
-      <h1 className="mt-4 font-serif text-[48px] leading-[0.95] tracking-[-0.03em]">
-        Checkout
-      </h1>
-    </main>
+      <Footer />
+    </>
   );
 };
 
 export default Checkout;
+  

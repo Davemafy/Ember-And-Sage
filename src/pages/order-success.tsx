@@ -1,14 +1,19 @@
+import Footer from "../components/layout/footer";
+import OrderDetailsCard from "../components/sections/order-success/order-details-card";
+import OrderNextSteps from "../components/sections/order-success/order-next-steps";
+import OrderSuccessHero from "../components/sections/order-success/order-success-hero";
+
 const OrderSuccess = () => {
   return (
-    <main className="min-h-screen bg-warm-ivory px-4 py-10 text-text-primary">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
-        Ember &amp; Sage
-      </p>
+    <>
+      <main className="bg-warm-ivory text-text-primary">
+        <OrderSuccessHero />
+        <OrderDetailsCard />
+        <OrderNextSteps />
+      </main>
 
-      <h1 className="mt-4 font-serif text-[48px] leading-[0.95] tracking-[-0.03em]">
-        Order Success
-      </h1>
-    </main>
+      <Footer />
+    </>
   );
 };
 

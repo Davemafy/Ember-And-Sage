@@ -1,14 +1,21 @@
+import Footer from "../components/layout/footer";
+import DeliveryStatusCard from "../components/sections/order-tracking/delivery-status-card";
+import OrderProgress from "../components/sections/order-tracking/order-progress";
+import OrderTrackingHero from "../components/sections/order-tracking/order-tracking-hero";
+import TrackingOrderSummary from "../components/sections/order-tracking/tracking-order-summary";
+
 const OrderTracking = () => {
   return (
-    <main className="min-h-screen bg-warm-ivory px-4 py-10 text-text-primary">
-      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
-        Ember &amp; Sage
-      </p>
+    <>
+      <main className="bg-warm-ivory text-text-primary">
+        <OrderTrackingHero />
+        <OrderProgress />
+        <DeliveryStatusCard />
+        <TrackingOrderSummary />
+      </main>
 
-      <h1 className="mt-4 font-serif text-[48px] leading-[0.95] tracking-[-0.03em]">
-        Order Tracking
-      </h1>
-    </main>
+      <Footer />
+    </>
   );
 };
 

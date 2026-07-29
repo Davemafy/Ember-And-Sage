@@ -14,12 +14,12 @@ const MobileHeader = ({
   onMenuClick,
 }: MobileHeaderProps) => {
   return (
-    <header className="h-[72px] bg-near-black text-warm-ivory px-4 flex items-center justify-between">
+    <header className="h-[85px] bg-near-black text-warm-ivory px-4 flex items-center justify-between">
       <a href="/" className="font-serif text-[25px] leading-none">
         Ember &amp; Sage
       </a>
 
-      <div className="flex items-center gap-2.5">
+      <div className="flex items-center gap-4">
         {showOrderButton ? (
           <Link to="/cart">
             <Button

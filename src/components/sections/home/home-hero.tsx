@@ -4,12 +4,14 @@ import heroBanner from "@/assets/img/home-hero.png";
 
 const HomeHero = () => {
   return (
-    <section className={`relative isolate text-warm-ivory `}>
-      <div className={` h-full  bg-near-black px-4 pb-8 pt-6`}>
+    <section className={` grid gap-4 text-warm-ivory `}>
+      <div
+        className={`relative isolate  min-h-[550px] round-bottom overflow-clip  bg-near-black px-4 pb-8 pt-6`}
+      >
         <img
           src={heroBanner}
           alt="hero-banner"
-          className="absolute w-full -z-1 top-0 left-0"
+          className="absolute h-full w-full -z-1 top-0 left-0"
         />
         <div className="space-y-6">
           <div>
@@ -22,7 +24,7 @@ const HomeHero = () => {
               language.
             </h1>
 
-            <p className="mt-5 max-w-[320px] tracking-[0.1px] font-light text-[15px] leading-6">
+            <p className="mt-5 tracking-[0.1px] max-w-[30ch] font-light text-[15px] leading-6">
               Ember &amp; Sage brings together the finest ingredients,
               exceptional flavours and genuine hospitality.
             </p>
@@ -33,36 +35,6 @@ const HomeHero = () => {
               <p className="text-[15px] font-light">Watch our story</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="rounded-[28px] bg-cream-surface p-5 text-text-primary">
-        <p className="text-xs font-semibold uppercase tracking-[0.22em] text-burnt-orange">
-          Reservations
-        </p>
-
-        <h2 className="mt-3 font-serif text-[32px] leading-none">
-          Find your table
-        </h2>
-
-        <div className="mt-5 space-y-3">
-          <div className="rounded-2xl border border-border-light px-4 py-3">
-            <p className="text-xs text-text-muted">Date</p>
-            <p className="mt-1 text-sm font-semibold">Tonight</p>
-          </div>
-
-          <div className="rounded-2xl border border-border-light px-4 py-3">
-            <p className="text-xs text-text-muted">Time</p>
-            <p className="mt-1 text-sm font-semibold">7:30 PM</p>
-          </div>
-
-          <div className="rounded-2xl border border-border-light px-4 py-3">
-            <p className="text-xs text-text-muted">Guests</p>
-            <p className="mt-1 text-sm font-semibold">2 Guests</p>
-          </div>
-        </div>
-
-        <div className="mt-5">
-          <Button fullWidth>Find a Table →</Button>
         </div>
       </div>
     </section>

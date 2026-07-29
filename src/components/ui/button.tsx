@@ -1,4 +1,5 @@
 import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { twMerge } from "tailwind-merge"; 
 
 type ButtonVariant =
   | "primary-orange"
@@ -38,7 +39,7 @@ const variantStyles: Record<ButtonVariant, string> = {
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: "h-11 px-5 text-sm",
+  sm: "h-11 px-5 ",
   md: "h-13 px-6 text-[15px]",
   lg: "h-14 px-7 text-base",
 };
@@ -57,13 +58,13 @@ const Button = ({
 
   return (
     <button
-      className={[
+      className={twMerge(
         "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-200 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70",
         variantStyles[variant],
         isIconButton ? iconSizeStyles : sizeStyles[size],
         fullWidth ? "w-full" : "",
-        className,
-      ].join(" ")}
+        className 
+      )}
       {...props}
     >
       {children}

@@ -1,4 +1,4 @@
-import { Menu, ShoppingBag } from "lucide-react";
+import { ArrowRight, ChevronRight, Menu, ShoppingBag } from "lucide-react";
 import Button from "../ui/button";
 import { Link } from "react-router-dom";
 
@@ -22,8 +22,12 @@ const MobileHeader = ({
       <div className="flex items-center gap-2.5">
         {showOrderButton ? (
           <Link to="/cart">
-            <Button variant="outline-light" size="sm">
-              Order Online →
+            <Button
+              variant="outline-light"
+              size="sm"
+              className="rounded-full whitespace-nowrap h-fit p-2.5 px-4 font-normal text-[13px]"
+            >
+              Order Online <ArrowRight size={12} />
             </Button>
           </Link>
         ) : (
@@ -46,9 +50,9 @@ const MobileHeader = ({
           type="button"
           onClick={onMenuClick}
           aria-label="Open menu"
-          className="grid h-11 w-11 place-items-center rounded-full border border-warm-ivory/35 text-warm-ivory"
+          className="grid h-10 w-10 place-items-center rounded-full border border-warm-ivory/35 text-warm-ivory"
         >
-          <Menu size={22} />
+          <Menu size={18} />
         </button>
       </div>
     </header>

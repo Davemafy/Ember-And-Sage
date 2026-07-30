@@ -1,12 +1,8 @@
 import {
-  ArrowLeft,
   ArrowRight,
   Calendar,
   ChevronDown,
   Clock,
-  Dot,
-  DotIcon,
-  PersonStanding,
   Play,
   ShieldCheck,
   User,

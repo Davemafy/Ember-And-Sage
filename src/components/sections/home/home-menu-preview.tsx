@@ -25,7 +25,7 @@ const dishes = [
 
 const HomeMenuPreview = () => {
   return (
-    <section className="bg-warm-ivory px-4 py-14 text-text-primary">
+    <section className="bg-warm-ivory px-4 pt-8  text-text-primary">
       <div>
         <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
           Discover

@@ -1,43 +1,33 @@
-import {
-  ArrowRight,
-  Calendar,
-  ChevronDown,
-  Clock,
-  Play,
-  ShieldCheck,
-  User,
-} from "lucide-react";
+import { ArrowRight, Calendar, ChevronDown, Clock, Play, ShieldCheck, User } from "lucide-react";
 import Button from "../../ui/button";
 import heroBanner from "@/assets/img/home-hero.png";
-import dotIcon from "@/assets/img/dot.svg";
 
 const HomeHero = () => {
   return (
-    <section className={` grid text-warm-ivory pb-4 `}>
+    <section className={`text-warm-ivory grid pb-4`}>
       <div
-        className={`relative isolate min-h-[560px] round-bottom overflow-clip  bg-near-black px-4 pb-8 pt-6`}
+        className={`round-bottom bg-near-black relative isolate min-h-[560px] overflow-clip px-4 pt-6 pb-8`}
       >
         <img
           src={heroBanner}
           alt="hero-banner"
-          className="absolute h-full w-full -z-1 top-0 left-0"
+          className="absolute top-0 left-0 -z-1 h-full w-full"
         />
         <div className="space-y-6">
           <div>
-            <p className="text-[9.5px] mb-3 font-semibold uppercase tracking-[0.15em] text-burnt-orange">
+            <p className="text-burnt-orange mb-3 text-[9.5px] font-semibold tracking-[0.15em] uppercase">
               Modern Cuisine. Timeless Experience.
             </p>
 
-            <h1 className="font-serif text-[56px] leading-[0.92] tracking-[-0.03em] max-w-[10ch]">
-              Good food is our <span className="italic font-normal">love</span>{" "}
-              language.
+            <h1 className="max-w-[10ch] font-serif text-[56px] leading-[0.92] tracking-[-0.03em]">
+              Good food is our <span className="font-normal italic">love</span> language.
             </h1>
 
-            <p className="mt-5 tracking-[0.1px] max-w-[30ch] font-light text-[15px] leading-6">
-              Ember &amp; Sage brings together the finest ingredients,
-              exceptional flavours and genuine hospitality.
+            <p className="mt-5 max-w-[30ch] text-[15px] leading-6 font-light tracking-[0.1px]">
+              Ember &amp; Sage brings together the finest ingredients, exceptional flavours and
+              genuine hospitality.
             </p>
-            <div className="flex gap-3 items-center mt-4">
+            <div className="mt-4 flex items-center gap-3">
               <Button variant="icon-button" className="h-9 w-9">
                 <Play size={14} stroke="white" />
               </Button>
@@ -47,66 +37,47 @@ const HomeHero = () => {
         </div>
       </div>
       <div className="px-7">
-          <div className="card rounded-2xl -mt-30 relative w-full bg-[#f9f4f1] shadow-xl shadow-[#d6d2d1] p-5 pt-4 px-8 text-text-primary">
-            <h2 className="mt-3 font-serif font-semibold text-[24px] leading-none">
-              Reserve Your Table
-            </h2>
-            <p className="0 flex items-center gap-2 mt-2 text-sm font-light text-text-muted">
-              <img
-                src={dotIcon}
-                alt="dot"
-                className="text-[60px] align-text-top h-1.25 text-burnt-orange"
-              />
-              <span className="text-xs">Quick and Easy</span>
+        <div className="card text-text-primary relative -mt-30 w-full rounded-2xl bg-[#f9f4f1] p-5 px-8 pt-4 shadow-xl shadow-[#d6d2d1]">
+          <h2 className="mt-3 font-serif text-[24px] leading-none font-semibold">
+            Reserve Your Table
+          </h2>
+          <p className="0 text-text-muted mt-2 flex items-center gap-2 text-sm font-light">
+            <span className="bg-burnt-orange h-1 w-1 rounded-full" />
+            <span className="text-xs">Quick and Easy</span>
+          </p>
+          <div className="mt-5 space-y-3">
+            <div className="border-border-light flex items-center gap-2 rounded-xl border bg-white px-4 py-3">
+              <Calendar size={16} />
+              <p className="mt-1 -translate-y-[2px] text-[13px] font-medium">Select Date</p>
+              <ChevronDown size={20} className="ml-auto text-gray-500" />
+            </div>
+            <div className="border-border-light flex items-center gap-2 rounded-xl border bg-white px-4 py-3">
+              <Clock size={16} />
+              <p className="mt-1 -translate-y-[2px] text-[13px] font-medium">Select Time</p>
+              <ChevronDown size={20} className="ml-auto text-gray-500" />
+            </div>
+            <div className="border-border-light flex items-center gap-2 rounded-xl border bg-white px-4 py-3">
+              <User size={16} />
+              <p className="mt-1 -translate-y-[2px] text-[13px] font-medium">2 Guests</p>
+              <ChevronDown size={20} className="ml-auto text-gray-500" />
+            </div>
+          </div>
+          <div className="mt-5">
+            <Button className="font-regular flex h-12 items-center rounded-md text-xs" fullWidth>
+              <span className="ml-auto">Find a Table</span>
+              <ArrowRight className="ml-auto" size={18} />
+            </Button>
+          </div>
+          <div className="text-text-muted mt-6 flex flex-wrap justify-center gap-x-4 gap-y-2 text-[11px]">
+            <p className="inline-flex items-center gap-2">
+              <ShieldCheck size={15} className="text-burnt-orange" />
+              <span>No booking fees.</span>
             </p>
 
-            <div className="mt-5 space-y-3">
-              <div className="rounded-xl flex items-center gap-2 bg-white border border-border-light px-4 py-3">
-                <Calendar size={16} />
-                <p className="mt-1 font-medium text-[13px] -translate-y-[2px]">
-                  Select Date
-                </p>
-                <ChevronDown size={20} className="ml-auto text-gray-500" />
-              </div>
-              <div className="rounded-xl flex items-center gap-2 bg-white border border-border-light px-4 py-3">
-                <Clock size={16} />
-                <p className="mt-1 font-medium text-[13px] -translate-y-[2px]">
-                  Select Time
-                </p>
-                <ChevronDown size={20} className="ml-auto text-gray-500" />
-              </div>
-              <div className="rounded-xl flex items-center gap-2 bg-white border border-border-light px-4 py-3">
-                <User size={16} />
-                <p className="mt-1 font-medium text-[13px] -translate-y-[2px]">
-                  2 Guests
-                </p>
-                <ChevronDown size={20} className="ml-auto text-gray-500" />
-              </div>
-            </div>
-
-            <div className="mt-5">
-              <Button
-                className=" text-xs h-12 rounded-md font-regular  flex items-center "
-                fullWidth
-              >
-                <span className="ml-auto">Find a Table</span>
-                <ArrowRight className="ml-auto" size={18} />
-              </Button>
-            </div>
-            <div className="flex items-center mt-6  gap-4">
-              <p className=" flex items-center  gap-2  text-sm font-light text-text-muted">
-                <ShieldCheck size={16} className="text-burnt-orange" />
-                <span className="text-[11px] whitespace-nowrap">
-                  {" "}
-                  No booking fees.
-                </span>
-              </p>
-              <img src={dotIcon} alt="dot" className=" h-1 text-burnt-orange" />
-              <p className="flex items-center gap-2 text-sm translate-px font-light text-text-muted">
-                <span className="text-[11px] whitespace-nowrap">
-                  Instant Confirmation
-                </span>
-              </p>
+            <p className="inline-flex items-center gap-2">
+              <span className="bg-burnt-orange h-1.5 w-1.5 rounded-full" />
+              <span>Instant confirmation.</span>
+            </p>
           </div>
         </div>
       </div>

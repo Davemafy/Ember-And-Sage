@@ -11,8 +11,8 @@ const Home = () => {
       <main>
         <HomeHero />
         <HomeMenuPreview />
-        <HomeExperience />
         <HomeStory />
+        <HomeExperience />
         <HomeGalleryPreview />
       </main>
 

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import Button from "../../ui/button";
-import { ArrowRight, ChevronRight, ChevronRightSquare, Plus } from "lucide-react";
+import { ArrowRight, Plus } from "lucide-react";
 import homeDish1 from "@/assets/img/home-dish-1.png";
 
 const dishes = [
@@ -10,7 +10,7 @@ const dishes = [
     price: "₦38,500",
     img: homeDish1,
     description: "Crispy skin, roasted fennel, lemon beurre blanc, and dill.",
-  }
+  },
 ];
 
 const HomeMenuPreview = () => {
@@ -21,7 +21,7 @@ const HomeMenuPreview = () => {
           Discover
         </p>
 
-        <h2 className="mt-3 max-w-[330px] font-serif text-[33px] leading-[0.95] font-semibold tracking-[-0.03em]">
+        <h2 className="mt-3 max-w-82.5 font-serif text-[33px] leading-[0.95] font-semibold tracking-[-0.03em]">
           Our Menu
         </h2>
 
@@ -70,11 +70,7 @@ const HomeMenuPreview = () => {
         </div>
         {dishes.map((dish) => (
           <article key={dish.name} className="">
-            <img
-              src={dish.img}
-              className="bg-soft-black mb-5 h-55 rounded-xl"
-              alt={dish.name}
-            />
+            <img src={dish.img} className="bg-soft-black mb-5 h-55 rounded-xl" alt={dish.name} />
 
             <div className="flex items-start justify-between gap-4">
               <div>
@@ -92,7 +88,7 @@ const HomeMenuPreview = () => {
 
             <p className="text-border-dark mt-1 shrink-0 text-xs">{dish.price}</p>
 
-            <Button variant="text-link" className="gap-2 p-0 text-xs">
+            <Button variant="text-link" className="gap-2 p-0 text-[13px]">
               View Dish <ArrowRight size={18} />
             </Button>
           </article>

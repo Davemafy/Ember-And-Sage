@@ -1,4 +1,4 @@
-import { ChefHat, Flame, Leaf, Users, Users2, Wine } from "lucide-react";
+import { ChefHat, Leaf, Users } from "lucide-react";
 
 const experiences = [
   {

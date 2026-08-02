@@ -1,27 +1,16 @@
 import { Link } from "react-router-dom";
 import Button from "../../ui/button";
-import { Plus } from "lucide-react";
+import { ArrowRight, ChevronRight, ChevronRightSquare, Plus } from "lucide-react";
 import homeDish1 from "@/assets/img/home-dish-1.png";
 
 const dishes = [
   {
-    name: "Wagyu Striploin",
-    category: "Chef's Special",
+    name: "Pan-Seared Sea Bass",
+    category: "Seasonal Special",
     price: "₦38,500",
-    description: "Charcoal-grilled striploin with herb butter and roasted roots.",
-  },
-  {
-    name: "Truffle Pappardelle",
-    category: "Pasta",
-    price: "₦21,000",
-    description: "Fresh ribbons of pasta with black truffle cream and parmesan.",
-  },
-  {
-    name: "Miso Glazed Salmon",
-    category: "Seafood",
-    price: "₦22,000",
-    description: "Slow-glazed salmon with citrus rice and seasonal greens.",
-  },
+    img: homeDish1,
+    description: "Crispy skin, roasted fennel, lemon beurre blanc, and dill.",
+  }
 ];
 
 const HomeMenuPreview = () => {
@@ -63,42 +52,49 @@ const HomeMenuPreview = () => {
           <div className="rounded-2xl border border-gray-200">
             <div className="flex justify-between gap-2 border-b border-gray-200 p-6 py-4">
               <p className="font-serif text-[15px] font-semibold">Seasonal Specials</p>
-              <Plus size={16} className="text-gray-500" />
+              <Plus size={16} className="text-neutral-700" />
             </div>
             <div className="flex justify-between gap-2 border-b border-gray-200 p-6 py-4">
               <p className="font-serif text-[15px] font-semibold">Main Courses</p>
-              <Plus size={16} className="text-gray-500" />
+              <Plus size={16} className="text-neutral-700" />
             </div>
             <div className="flex justify-between gap-2 border-b border-gray-200 p-6 py-4">
               <p className="font-serif text-[15px] font-semibold">Small Plates</p>
-              <Plus size={16} className="text-gray-500" />
+              <Plus size={16} className="text-neutral-700" />
             </div>
             <div className="flex justify-between gap-2 p-6 py-4">
               <p className="font-serif text-[15px] font-semibold">Desserts & Drinks</p>
-              <Plus size={16} className="text-gray-500" />
+              <Plus size={16} className="text-neutral-700" />
             </div>
           </div>
         </div>
         {dishes.map((dish) => (
-          <article
-            key={dish.name}
-            className="border-border-light bg-cream-surface rounded-[28px] border p-0"
-          >
-            <div className="bg-soft-black mb-5 h-[220px] rounded-[22px]" />
+          <article key={dish.name} className="">
+            <img
+              src={dish.img}
+              className="bg-soft-black mb-5 h-55 rounded-xl"
+              alt={dish.name}
+            />
 
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-burnt-orange text-xs font-semibold tracking-[0.2em] uppercase">
-                  Seasonal Special
+                <p className="text-burnt-orange text-[11px] font-semibold tracking-[0.2em] uppercase">
+                  {dish.category}
                 </p>
 
-                <h3 className="mt-2 font-serif text-[28px] leading-none">Pan-Seared Sea Bass</h3>
+                <h3 className="mt-2 font-serif text-[28px] leading-none font-semibold">
+                  {dish.name}
+                </h3>
               </div>
-
-              <p className="text-text-primary shrink-0 text-sm font-semibold">{dish.price}</p>
             </div>
 
-            <p className="text-text-secondary mt-4 text-sm leading-6">{dish.description}</p>
+            <p className="text-border-dark mt-1 text-[13px] leading-6">{dish.description}</p>
+
+            <p className="text-border-dark mt-1 shrink-0 text-xs">{dish.price}</p>
+
+            <Button variant="text-link" className="gap-2 p-0 text-xs">
+              View Dish <ArrowRight size={18} />
+            </Button>
           </article>
         ))}
       </div>

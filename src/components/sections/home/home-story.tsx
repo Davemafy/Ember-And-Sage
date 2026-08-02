@@ -1,5 +1,6 @@
 import Button from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import restaurantDining from "@/assets/img/restaurant-dining.png";
 
 const HomeStory = () => {
   return (
@@ -22,7 +23,7 @@ const HomeStory = () => {
           <Button variant="text-link" className="gap-2 p-0 text-[13px]">
             Learn Our Story <ArrowRight size={18} />
           </Button>
-          <div className="bg-soft-black h-[200px] rounded-xl" />
+          <img src={restaurantDining} className="bg-soft-black h-[190px] rounded-xl" alt="Restaurant Dining" />
         </div>
       </div>
     </section>

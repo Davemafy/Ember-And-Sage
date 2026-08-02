@@ -11,19 +11,23 @@ const HomeStory = () => {
             Our Story
           </p>
 
-          <h2 className="mt-4 font-serif text-[33px] leading-[0.95] font-semibold tracking-[-0.03em]">
+          <h2 className="mt-3 font-serif text-[33px] leading-[0.95] font-semibold tracking-[-0.03em]">
             More than <span className="italic">a</span> restaurant.
           </h2>
 
-          <p className="mt-5 text-[15px] leading-6">
+          <p className="text-text-secondary mt-3 max-w-[320px] text-[15px] leading-6">
             Ember &amp; Sage was created around a simple idea, dining should feel warm, memorable,
             and deeply considered. From the first welcome to the final course, every detail is
             shaped with care.
           </p>
-          <Button variant="text-link" className="gap-2 p-0 text-[13px]">
+          <Button variant="text-link" className="gap-2 p-0 font-medium text-[13px]">
             Learn Our Story <ArrowRight size={18} />
           </Button>
-          <img src={restaurantDining} className="bg-soft-black h-[190px] rounded-xl" alt="Restaurant Dining" />
+          <img
+            src={restaurantDining}
+            className="bg-soft-black h-[190px] rounded-xl"
+            alt="Restaurant Dining"
+          />
         </div>
       </div>
     </section>

@@ -21,7 +21,7 @@ const HomeMenuPreview = () => {
           Discover
         </p>
 
-        <h2 className="mt-3 max-w-82.5 font-serif text-[33px] leading-[0.95] font-semibold tracking-[-0.03em]">
+        <h2 className="mt-3 font-serif text-[33px] leading-[0.95] font-semibold tracking-[-0.03em]">
           Our Menu
         </h2>
 
@@ -88,7 +88,7 @@ const HomeMenuPreview = () => {
 
             <p className="text-border-dark mt-1 shrink-0 text-xs">{dish.price}</p>
 
-            <Button variant="text-link" className="gap-2 p-0 text-[13px]">
+            <Button variant="text-link" className="gap-2 p-0 text-[13px] font-medium">
               View Dish <ArrowRight size={18} />
             </Button>
           </article>

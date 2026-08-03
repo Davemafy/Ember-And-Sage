@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import Button from "../../ui/button";
 
 const galleryItems = [
@@ -21,46 +22,37 @@ const galleryItems = [
 
 const HomeGalleryPreview = () => {
   return (
-    <section className="bg-cream-surface px-4 py-14 text-text-primary">
+    <section className="bg-cream-surface text-text-primary px-4 py-14">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
+        <p className="text-burnt-orange text-[13px] font-semibold tracking-[0.24em] uppercase">
           Gallery
         </p>
 
-        <h2 className="mt-4 max-w-[330px] font-serif text-[44px] leading-[0.95] tracking-[-0.03em]">
-          A glimpse into the Ember &amp; Sage atmosphere.
+        <h2 className="mt-4 max-w-[330px] font-serif text-[30px] leading-[0.95] font-semibold tracking-[-0.03em]">
+          A glimpse inside Ember &amp; Sage
         </h2>
 
-        <p className="mt-5 max-w-[320px] text-[15px] leading-7 text-text-secondary">
-          From intimate tables to beautifully plated dishes, every corner is
-          designed to feel warm, elegant, and memorable.
-        </p>
+        <Button variant="text-link" className="gap-2 p-0 text-[13px] font-medium">
+          View Gallery <ArrowRight size={18} />
+        </Button>
       </div>
 
-      <div className="mt-9 grid grid-cols-2 gap-3">
+      <div className="-mx-4 mt-1 flex gap-4 overflow-y-auto px-4">
         {galleryItems.map((item, index) => (
-          <article
-            key={item.title}
-            className={`overflow-hidden rounded-[24px] bg-soft-black ${
-              index === 0 || index === 3 ? "h-[240px]" : "h-[190px]"
-            }`}
-          >
-            <div className="flex h-full flex-col justify-end bg-black/20 p-4 text-warm-ivory">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-burnt-orange">
-                {item.label}
-              </p>
-
-              <h3 className="mt-2 font-serif text-[22px] leading-none">
-                {item.title}
-              </h3>
-            </div>
-          </article>
+          <article key={item.title} className={`h-40 w-70 shrink-0 rounded-xl bg-black`}></article>
         ))}
       </div>
 
-      <div className="mt-8">
-        <Button variant="primary-dark" fullWidth>
-          View Gallery →
+      <div className="bg-near-black mt-8 rounded-xl p-4 pb-8">
+        <h2 className="mt-4 text-white  max-w-[250px] font-serif text-[25px] leading-[0.95] font-medium tracking-[-0.03em]">
+          Plan something special. We'll take care of the rest.
+        </h2>
+        <Button
+          variant="primary-orange"
+          size="sm"
+          className="mt-4 px-6 py-4 text-[12px] font-normal"
+        >
+          Reserve Your Table <ArrowRight size={17} />
         </Button>
       </div>
     </section>

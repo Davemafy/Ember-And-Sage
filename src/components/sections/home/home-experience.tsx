@@ -1,4 +1,6 @@
-import { ChefHat, Leaf, Users } from "lucide-react";
+import QuoteIcon from "@/components/icons/quote-icon";
+import { ChefHat, Leaf, Star, Users } from "lucide-react";
+import guest1 from "@/assets/img/guest-1.png";
 
 const experiences = [
   {
@@ -38,9 +40,9 @@ const HomeExperience = () => {
           return (
             <article
               key={item.title}
-              className="flex gap-6 rounded-xl border border-border-light p-5"
+              className="border-border-light flex gap-6 rounded-xl border p-5"
             >
-              <div className="text-burnt-orange aspect-square h-full rounded-full border border-border-light p-3">
+              <div className="text-burnt-orange border-border-light aspect-square h-full rounded-full border p-3">
                 <Icon size={50} strokeWidth={1} />
               </div>
               <div>
@@ -48,11 +50,41 @@ const HomeExperience = () => {
                   {item.title}
                 </h3>
 
-                <p className="text-text-secondary/90 mt-2 text-sm leading-6">{item.description}</p>
+                <p className="text-text-secondary/90 mt-2 text-sm leading-5.5">
+                  {item.description}
+                </p>
               </div>
             </article>
           );
         })}
+      </div>
+      <div className="mt-10">
+        <p className="text-burnt-orange text-[11px] font-semibold tracking-[0.24em] uppercase">
+          What Guests Say
+        </p>
+        <div className="border-border-light mt-2 grid gap-4 rounded-xl border p-5">
+          <QuoteIcon width={30} />
+          <h3 className="max-w-[22ch] flex-3 font-serif text-[22px] leading-none font-semibold">
+            An unforgettable dining experience. The flavours, the ambience, the service - everything
+            was perfect.”
+          </h3>
+          <div>
+            <div className="flex items-center gap-3 items-end">
+              <img src={guest1} className="bg-text-primary h-10 w-10 rounded-full" alt="" />
+              <div>
+                <p className="text-[13px] font-medium">Sophia M.</p>
+                <p className="text-xs text-gray-400">Loyal Guest</p>
+              </div>
+              <div className="flex ml-auto gap-2">
+                <Star size={13} fill="#d9471e" className="text-burnt-orange" />
+                <Star size={13} fill="#d9471e" className="text-burnt-orange" />
+                <Star size={13} fill="#d9471e" className="text-burnt-orange" />
+                <Star size={13} fill="#d9471e" className="text-burnt-orange" />
+                <Star size={13} fill="#d9471e" className="text-burnt-orange" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

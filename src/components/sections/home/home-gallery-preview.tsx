@@ -38,13 +38,13 @@ const HomeGalleryPreview = () => {
       </div>
 
       <div className="-mx-4 mt-1 flex gap-4 overflow-y-auto px-4">
-        {galleryItems.map((item, index) => (
+        {galleryItems.map((item) => (
           <article key={item.title} className={`h-40 w-70 shrink-0 rounded-xl bg-black`}></article>
         ))}
       </div>
 
       <div className="bg-near-black mt-8 rounded-xl p-4 pb-8">
-        <h2 className="mt-4 text-white  max-w-[250px] font-serif text-[25px] leading-[0.95] font-medium tracking-[-0.03em]">
+        <h2 className="mt-4 text-white  max-w-[25px] font-serif text-[25px] leading-[0.95] font-medium tracking-[-0.03em]">
           Plan something special. We'll take care of the rest.
         </h2>
         <Button

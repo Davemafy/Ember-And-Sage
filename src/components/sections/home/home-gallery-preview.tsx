@@ -44,7 +44,7 @@ const HomeGalleryPreview = () => {
       </div>
 
       <div className="bg-near-black mt-8 rounded-xl p-4 pb-8">
-        <h2 className="mt-4 text-white  max-w-[25px] font-serif text-[25px] leading-[0.95] font-medium tracking-[-0.03em]">
+        <h2 className="mt-4 text-white  max-w-[250px] font-serif text-[25px] leading-[0.95] font-medium tracking-[-0.03em]">
           Plan something special. We'll take care of the rest.
         </h2>
         <Button

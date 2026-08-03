@@ -15,7 +15,7 @@ const MobileHeader = ({
 }: MobileHeaderProps) => {
   return (
     <header className="h-[85px] bg-near-black text-warm-ivory px-4 flex items-center justify-between">
-      <a href="/" className="font-serif text-[25px] leading-none">
+      <a href="/" className="font-serif text-[20px] sm:text-[25px] leading-none">
         Ember &amp; Sage
       </a>
 

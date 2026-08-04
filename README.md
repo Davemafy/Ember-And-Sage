@@ -4,7 +4,7 @@
 
 **A premium restaurant experience shaped by warmth, restraint, and modern editorial design.**
 
-[Explore the repository](https://github.com/Davemafy/Ember-And-Sage)
+[View Live Site](https://embersage.vercel.app)
 
 </div>
 

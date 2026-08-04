@@ -4,7 +4,7 @@
 
 **A premium restaurant experience shaped by warmth, restraint, and modern editorial design.**
 
-[View Live Site](https://embersage.vercel.app)
+[Experience Ember & Sage](https://embersage.vercel.app)
 
 </div>
 

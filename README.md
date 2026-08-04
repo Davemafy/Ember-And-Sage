@@ -1,117 +1,156 @@
+<div align="center">
+
 # Ember & Sage
 
-A cinematic restaurant website experience for modern dining brands.
+**A premium restaurant experience shaped by warmth, restraint, and modern editorial design.**
 
-Ember & Sage is a premium restaurant website concept built by **David Imafidon** under **Rivelo Studio**. It is designed for restaurants that want more than a basic menu page — a warm, editorial, high-end digital experience that helps guests explore the menu, reserve a table, contact the restaurant, and move through an online ordering flow.
+[Explore the repository](https://github.com/Davemafy/Ember-And-Sage)
 
-<p align="left">
-  <img src="./screenshots/home.webp" alt="Ember & Sage homepage preview" width="460" />
+</div>
+
+<br />
+
+<p align="center">
+  <img src="./screenshots/home.webp" alt="Ember & Sage homepage" width="100%" />
 </p>
 
-## Live Experience
+## Overview
 
-[Visit the live site](https://embersage.vercel.app)
+Ember & Sage is a full-stack restaurant product being developed in phases around an intimate, high-end dining experience. Its current frontend foundation combines cinematic imagery, editorial typography, warm colour, and clear interaction design across menu discovery, reservations, and ordering.
 
-## The Vision
+The project explores how a restaurant website can feel atmospheric and distinctive without sacrificing usability. Every screen belongs to one coherent product journey rather than a collection of disconnected landing-page sections.
 
-Most restaurant websites feel generic: a hero image, a menu PDF, a few cards, and repeated “Book Now” buttons.
+## Experience
 
-Ember & Sage takes a more refined direction.
-
-The goal is to create a restaurant website that feels like the beginning of the dining experience itself — cinematic, intimate, warm, and carefully paced.
-
-This project is built to work as both:
-
-- a premium frontend portfolio project
-- a reusable restaurant website foundation for future client work under Rivelo Studio
+- Editorial homepage with menu, story, experience, and gallery previews
+- Searchable and filterable menu presentation
+- Data-driven dish pages using dynamic route parameters
+- Portion selection and related-dish recommendations
+- Reservation booking interface
+- Frontend flows for cart, checkout, order success, and order tracking
+- Gallery, About, Contact, and custom not-found pages
+- Responsive navigation and layouts across desktop and mobile
+- Reusable components, shared visual tokens, and structured page sections
 
 ## Screens
 
-### Menu Discovery
+<!-- Update these filenames if your local WebP files use different names. -->
 
-Guests can browse the menu, view chef’s specials, and open individual dish detail pages.
+<table>
+  <tr>
+    <td width="50%">
+      <img src="./screenshots/menu.webp" alt="Ember & Sage menu page" width="100%" />
+    </td>
+    <td width="50%">
+      <img src="./screenshots/dish-details.webp" alt="Ember & Sage dish details page" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Menu discovery</strong></td>
+    <td align="center"><strong>Dish details</strong></td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <img src="./screenshots/reservations.webp" alt="Ember & Sage reservations page" width="100%" />
+    </td>
+    <td width="50%">
+      <img src="./screenshots/cart.webp" alt="Ember & Sage cart page" width="100%" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Reservations</strong></td>
+    <td align="center"><strong>Order cart</strong></td>
+  </tr>
+</table>
 
-<p align="left">
-  <img src="./screenshots/menu.webp" alt="Ember & Sage menu page preview" width="460" />
-</p>
+## Technology
 
-### Reservations
+| Tool | Purpose |
+| --- | --- |
+| React 19 | Component-based interface development |
+| TypeScript | Type-safe application code |
+| React Router 7 | Client-side routing and dynamic dish routes |
+| Tailwind CSS 4 | Responsive styling and design tokens |
+| Vite 8 | Development server and production build tooling |
+| Lucide React | Consistent interface iconography |
 
-A polished reservation flow helps guests choose date, time, guests, dining area, and understand booking details.
+## Routes
 
-<p align="left">
-  <img src="./screenshots/reservations.webp" alt="Ember & Sage reservations page preview" width="460" />
-</p>
+| Route | Screen |
+| --- | --- |
+| `/` | Home |
+| `/menu` | Menu |
+| `/menu/:dishId` | Dish details |
+| `/reservations` | Reservations |
+| `/gallery` | Gallery |
+| `/about` | About |
+| `/contact` | Contact |
+| `/cart` | Cart |
+| `/checkout` | Checkout |
+| `/order-success` | Order confirmation |
+| `/order-tracking` | Order tracking |
 
-### Ordering Flow
+## Getting started
 
-The static order journey includes cart, checkout, order confirmation, and order tracking screens.
+### Prerequisites
 
-<p align="left">
-  <img src="./screenshots/checkout.webp" alt="Ember & Sage checkout flow preview" width="460" />
-</p>
+- Node.js 20 or later
+- npm
 
-## Customer Journey
+### Installation
 
-Ember & Sage includes a complete static restaurant website flow:
+```bash
+git clone https://github.com/Davemafy/Ember-And-Sage.git
+cd Ember-And-Sage
+npm install
+npm run dev
+```
 
-- Home
-- Menu
-- Dish Details
-- Reservations
-- About
-- Gallery
-- Contact
-- Cart
-- Checkout
-- Order Success
-- Order Tracking
+Open the local URL shown by Vite in your browser.
 
-## Design Direction
+## Available scripts
 
-The visual system is built around a premium hospitality feel:
+```bash
+npm run dev      # Start the development server
+npm run build    # Type-check and create a production build
+npm run lint     # Run ESLint
+npm run preview  # Preview the production build locally
+```
 
-- Near-black backgrounds
-- Warm ivory typography
-- Restrained burnt-orange accents
-- Editorial serif headings
-- Generous whitespace
-- Cinematic food and interior imagery
-- Mobile-first layouts
-- Subtle, purposeful interaction
-- Refined cards and spacing
+## Project structure
 
-The goal is to avoid the usual restaurant-template look: generic cards, obvious food clichés, excessive calls to action, and layouts that feel AI-generated.
+```text
+src/
+├── components/
+│   ├── cards/       # Reusable content and dish cards
+│   ├── layout/      # Shared navigation, footer, and layouts
+│   ├── sections/    # Page-specific content sections
+│   └── ui/          # Reusable interface primitives
+├── data/            # Menu and application data
+├── pages/           # Route-level screens
+├── App.tsx          # Router provider
+├── router.tsx       # Application route definitions
+└── index.css        # Global styles and design tokens
+```
 
-## Built With
+## Design direction
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- React Router
-- Lucide React
-- Vercel
+The visual system is built around near-black surfaces, warm ivory, restrained burnt-orange accents, high-contrast serif typography, and generous spacing. The result aims to feel cinematic and refined while keeping the core actions—discovering dishes, reserving a table, and placing an order—easy to understand.
 
-## Current Status
+## Development roadmap
 
-The core static site flow is built and deployed.
+Ember & Sage is being built toward a complete restaurant platform, not a frontend-only concept. The current phase establishes the customer experience, reusable interface system, and full route structure. The next phase will connect those flows to real application data and restaurant operations.
 
-The next phase is focused on polish:
+- [x] Responsive customer-facing interface
+- [x] Menu data and dynamic dish pages
+- [x] Reservation, cart, checkout, and tracking interfaces
+- [ ] Backend API and database
+- [ ] Persistent carts and customer orders
+- [ ] Live reservation availability and booking records
+- [ ] Secure payment integration
+- [ ] Real order-status updates
+- [ ] Restaurant management tools
 
-- Matching the implementation more closely to the design references
-- Replacing placeholder image blocks with premium food and interior visuals
-- Improving spacing, rhythm, and typography
-- Strengthening desktop responsiveness
-- Refining navigation and user flows
+## Author
 
-## Project Intent
-
-Ember & Sage is frontend-focused. It does not currently include backend functionality, authentication, real payments, or persistent cart state.
-
-The focus is on visual execution, responsive frontend architecture, polished product flow, and building a restaurant website strong enough to present to real restaurant clients.
-
-## Created By
-
-Built by **David Imafidon**  
-A Rivelo Studio project
+Designed and developed by [David Imafidon](https://github.com/Davemafy).

@@ -1,5 +1,4 @@
-import { ArrowDown, ChevronDown } from "lucide-react";
-import Button from "../ui/button";
+import { ChevronDown } from "lucide-react";
 import Facebook from "../icons/facebook";
 import Instagram from "../icons/instagram";
 import TripAdvidor from "../icons/tripadvidor";

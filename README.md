@@ -1,75 +1,117 @@
-# React + TypeScript + Vite
+# Ember & Sage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cinematic restaurant website experience for modern dining brands.
 
-Currently, two official plugins are available:
+Ember & Sage is a premium restaurant website concept built by **David Imafidon** under **Rivelo Studio**. It is designed for restaurants that want more than a basic menu page — a warm, editorial, high-end digital experience that helps guests explore the menu, reserve a table, contact the restaurant, and move through an online ordering flow.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<p align="left">
+  <img src="./screenshots/home.webp" alt="Ember & Sage homepage preview" width="460" />
+</p>
 
-## React Compiler
+## Live Experience
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Visit the live site](https://embersage.vercel.app)
 
-## Expanding the ESLint configuration
+## The Vision
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Most restaurant websites feel generic: a hero image, a menu PDF, a few cards, and repeated “Book Now” buttons.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Ember & Sage takes a more refined direction.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+The goal is to create a restaurant website that feels like the beginning of the dining experience itself — cinematic, intimate, warm, and carefully paced.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This project is built to work as both:
 
-```
+- a premium frontend portfolio project
+- a reusable restaurant website foundation for future client work under Rivelo Studio
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Screens
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Menu Discovery
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Guests can browse the menu, view chef’s specials, and open individual dish detail pages.
 
-```
+<p align="left">
+  <img src="./screenshots/menu.webp" alt="Ember & Sage menu page preview" width="460" />
+</p>
+
+### Reservations
+
+A polished reservation flow helps guests choose date, time, guests, dining area, and understand booking details.
+
+<p align="left">
+  <img src="./screenshots/reservations.webp" alt="Ember & Sage reservations page preview" width="460" />
+</p>
+
+### Ordering Flow
+
+The static order journey includes cart, checkout, order confirmation, and order tracking screens.
+
+<p align="left">
+  <img src="./screenshots/checkout.webp" alt="Ember & Sage checkout flow preview" width="460" />
+</p>
+
+## Customer Journey
+
+Ember & Sage includes a complete static restaurant website flow:
+
+- Home
+- Menu
+- Dish Details
+- Reservations
+- About
+- Gallery
+- Contact
+- Cart
+- Checkout
+- Order Success
+- Order Tracking
+
+## Design Direction
+
+The visual system is built around a premium hospitality feel:
+
+- Near-black backgrounds
+- Warm ivory typography
+- Restrained burnt-orange accents
+- Editorial serif headings
+- Generous whitespace
+- Cinematic food and interior imagery
+- Mobile-first layouts
+- Subtle, purposeful interaction
+- Refined cards and spacing
+
+The goal is to avoid the usual restaurant-template look: generic cards, obvious food clichés, excessive calls to action, and layouts that feel AI-generated.
+
+## Built With
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- React Router
+- Lucide React
+- Vercel
+
+## Current Status
+
+The core static site flow is built and deployed.
+
+The next phase is focused on polish:
+
+- Matching the implementation more closely to the design references
+- Replacing placeholder image blocks with premium food and interior visuals
+- Improving spacing, rhythm, and typography
+- Strengthening desktop responsiveness
+- Refining navigation and user flows
+
+## Project Intent
+
+Ember & Sage is frontend-focused. It does not currently include backend functionality, authentication, real payments, or persistent cart state.
+
+The focus is on visual execution, responsive frontend architecture, polished product flow, and building a restaurant website strong enough to present to real restaurant clients.
+
+## Created By
+
+Built by **David Imafidon**  
+A Rivelo Studio project

@@ -6,6 +6,7 @@ type DishCardProps = {
   name: string;
   category: string;
   price: string;
+  image: string;
   description: string;
   tags: string[];
 };
@@ -15,13 +16,14 @@ const DishCard = ({
   name,
   category,
   price,
+  image,
   description,
   tags,
 }: DishCardProps) => {
   return (
-    <article className="overflow-hidden rounded-[26px] border border-border-light bg-cream-surface shadow-sm">
+    <article className="overflow-hidden rounded-[26px] border border-border-light bg-inherit shadow-sm">
       <Link to={`/menu/${id}`} className="block">
-        <div className="h-[230px] bg-soft-black" />
+        <img src={image} alt={name} className="h-[230px] w-full object-cover bg-soft-black" />
       </Link>
 
       <div className="p-5">
@@ -29,19 +31,19 @@ const DishCard = ({
           {category}
         </p>
 
-        <div className="mt-2 flex items-start justify-between gap-4">
+        <div className="mt-4 flex items-start justify-between gap-4">
           <Link to={`/menu/${id}`}>
-            <h3 className="font-serif text-[28px] leading-none text-text-primary">
+            <h3 className="font-serif  font-semibold text-[28px] leading-none text-text-primary">
               {name}
             </h3>
           </Link>
 
-          <p className="shrink-0 text-sm font-bold text-text-primary">
+          <p className="shrink-0 text-[15px] font-bold text-text-primary">
             {price}
           </p>
         </div>
 
-        <p className="mt-3 text-sm leading-6 text-text-secondary">
+        <p className="mt-5 text-[15px] leading-6 text-text-secondary">
           {description}
         </p>
 

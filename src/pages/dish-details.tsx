@@ -1,13 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import {
-  ArrowLeft,
-  Clock,
-  Flame,
-  Leaf,
-  Plus,
-  Sparkles,
-  Users,
-} from "lucide-react";
+import { ArrowLeft, Clock, Flame, Leaf, Plus, Sparkles, Star, Users } from "lucide-react";
 
 import Button from "../components/ui/button";
 import Footer from "../components/layout/footer";
@@ -22,17 +14,17 @@ const DishDetails = () => {
   if (!dish) {
     return (
       <>
-        <main className="min-h-screen bg-warm-ivory px-4 py-12 text-text-primary">
+        <main className="bg-warm-ivory text-text-primary min-h-screen px-4 py-12">
           <Link
             to="/menu"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-burnt-orange"
+            className="text-burnt-orange inline-flex items-center gap-2 text-sm font-semibold"
           >
             <ArrowLeft size={16} />
-            Back to Menu
+            Main Courses
           </Link>
 
           <div className="mt-16">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
+            <p className="text-burnt-orange text-xs font-semibold tracking-[0.24em] uppercase">
               Dish Not Found
             </p>
 
@@ -40,7 +32,7 @@ const DishDetails = () => {
               This dish is not on the menu.
             </h1>
 
-            <p className="mt-5 text-[15px] leading-7 text-text-secondary">
+            <p className="text-text-secondary mt-5 text-[15px] leading-7">
               The dish may have been removed or the link may be incorrect.
             </p>
 
@@ -57,66 +49,75 @@ const DishDetails = () => {
     );
   }
 
-  const relatedDishes = dishes
-    .filter((item) => item.id !== dish.id)
-    .slice(0, 2);
+  const relatedDishes = dishes.filter((item) => item.id !== dish.id).slice(0, 2);
 
   return (
     <>
       <main className="bg-warm-ivory text-text-primary">
-        <section className="bg-near-black px-4 pb-8 pt-6 text-warm-ivory">
+        <section className="text-warm-ivory relative isolate min-h-120 px-4 pt-6 pb-8">
+          <img
+            src={dish.image}
+            className="absolute top-0 left-0 -z-2 h-full w-full object-cover object-center"
+          />
+
+          <div className="pointer-events-none absolute inset-0 -z-1 bg-gradient-to-b from-black/85 via-black/0 to-transparent"></div>
+          <div className="pointer-events-none absolute inset-0 -z-1 bg-gradient-to-t from-black/60 via-black/0 to-transparent"></div>
           <Link
             to="/menu"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-warm-ivory/70"
+            className="text-warm-ivory/70 inline-flex items-center gap-3 font-medium"
           >
-            <ArrowLeft size={16} />
-            Back to Menu
+            <ArrowLeft size={20} />
+            Main Courses
           </Link>
-
-          <div className="mt-6 overflow-hidden rounded-[32px] bg-soft-black">
-            <div className="h-[360px] bg-soft-black" />
-
-            <div className="border-t border-warm-ivory/10 px-5 py-4">
-              <p className="text-xs uppercase tracking-[0.2em] text-warm-ivory/45">
-                Signature Plate
-              </p>
-
-              <p className="mt-1 font-serif text-[25px] leading-none">
-                {dish.name}
-              </p>
+          <div className="mt-3 flex h-fit w-fit items-center gap-2 rounded-full border p-5 py-2.5 text-sm">
+            <Star size={20} className="text-white" />
+            Bestseller
+          </div>
+          <div className="absolute bottom-4 left-0 w-full rounded-[32px] px-4">
+            <div className="flex gap-2">
+              <img
+                src={dish.image}
+                className="border-burnt-orange aspect-square w-full min-w-16 rounded-xl border-2 object-cover"
+              />
+              <img
+                src={dish.image}
+                className="border-warm-ivory aspect-square w-full min-w-16 rounded-xl border-2 object-cover"
+              />
+              <img
+                src={dish.image}
+                className="border-warm-ivory aspect-square w-full min-w-16 rounded-xl border-2 object-cover"
+              />
+              <img
+                src={dish.image}
+                className="border-warm-ivory aspect-square w-full min-w-16 rounded-xl border-2 object-cover"
+              />
             </div>
           </div>
         </section>
 
         <section className="px-4 py-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
+          <p className="text-burnt-orange text-xs font-semibold tracking-[0.24em] uppercase">
             {dish.category}
           </p>
 
           <div className="mt-4 flex items-start justify-between gap-4">
-            <h1 className="font-serif text-[50px] leading-[0.9] tracking-[-0.03em]">
+            <h1 className="font-serif text-[46px] leading-[1.1] font-bold tracking-[-0.03em]">
               {dish.name}
             </h1>
-
-            <p className="shrink-0 rounded-full bg-cream-surface px-4 py-2 text-sm font-bold">
-              {dish.price}
-            </p>
           </div>
 
-          <p className="mt-5 text-[15px] leading-7 text-text-secondary">
-            {dish.longDescription}
-          </p>
+          <p className="text-text-secondary mt-5 text-[16px] leading-8">{dish.longDescription}</p>
 
           <div className="mt-6 flex flex-wrap gap-2">
             {dish.tags.map((tag) => (
               <span
                 key={tag}
-                className="inline-flex items-center gap-1.5 rounded-full border border-border-light bg-cream-surface px-3 py-2 text-xs text-text-secondary"
+                className="border-border-light bg-cream-surface text-text-secondary inline-flex items-center gap-1.5 rounded-full border px-3 py-2 text-xs"
               >
                 {tag.toLowerCase().includes("high") ? (
-                  <Sparkles size={13} className="text-burnt-orange" />
+                  <Sparkles size={19} className="text-burnt-orange" />
                 ) : (
-                  <Leaf size={13} className="text-burnt-orange" />
+                  <Leaf size={19} className="text-burnt-orange" />
                 )}
                 {tag}
               </span>
@@ -124,46 +125,58 @@ const DishDetails = () => {
           </div>
 
           <div className="mt-8 grid grid-cols-3 gap-3">
-            <div className="rounded-2xl border border-border-light bg-cream-surface p-4">
+            <div className="border-border-light bg-cream-surface rounded-2xl border p-4">
               <Clock size={18} className="text-burnt-orange" />
-              <p className="mt-3 text-xs text-text-muted">Prep</p>
+              <p className="text-text-muted mt-3 text-xs">Prep</p>
               <p className="mt-1 text-sm font-semibold">{dish.prepTime}</p>
             </div>
 
-            <div className="rounded-2xl border border-border-light bg-cream-surface p-4">
+            <div className="border-border-light bg-cream-surface rounded-2xl border p-4">
               <Flame size={18} className="text-burnt-orange" />
-              <p className="mt-3 text-xs text-text-muted">Energy</p>
+              <p className="text-text-muted mt-3 text-xs">Energy</p>
               <p className="mt-1 text-sm font-semibold">{dish.calories}</p>
             </div>
 
-            <div className="rounded-2xl border border-border-light bg-cream-surface p-4">
+            <div className="border-border-light bg-cream-surface rounded-2xl border p-4">
               <Users size={18} className="text-burnt-orange" />
-              <p className="mt-3 text-xs text-text-muted">Serving</p>
+              <p className="text-text-muted mt-3 text-xs">Serving</p>
               <p className="mt-1 text-sm font-semibold">{dish.serving}</p>
+            </div>
+          </div>
+
+          <div className="mt-6">
+            <p className="shrink-0 rounded-full py-2 text-[28px] font-bold tracking-wider">
+              {dish.price}
+            </p>
+            <div className="flex items-center gap-4 mt-3">
+              <div className="flex gap-2">
+                <Star size={19} fill="#d9471e" className="text-burnt-orange" />
+                <Star size={19} fill="#d9471e" className="text-burnt-orange" />
+                <Star size={19} fill="#d9471e" className="text-burnt-orange" />
+                <Star size={19} fill="#d9471e" className="text-burnt-orange" />
+                <Star size={19} fill="#d9471e" className="text-burnt-orange" />
+              </div>
+              <p>4.8 (126 reviews)</p>
             </div>
           </div>
         </section>
 
         <section className="px-4 pb-8">
-          <div className="rounded-[30px] border border-border-light bg-cream-surface p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-burnt-orange">
+          <div className="border-border-light bg-cream-surface rounded-[30px] border p-5">
+            <p className="text-burnt-orange text-xs font-semibold tracking-[0.24em] uppercase">
               Customize Order
             </p>
 
-            <h2 className="mt-4 font-serif text-[32px] leading-none">
-              Choose your portion
-            </h2>
+            <h2 className="mt-4 font-serif text-[32px] leading-none">Choose your portion</h2>
 
             <div className="mt-5 space-y-3">
               <button
                 type="button"
-                className="flex w-full items-center justify-between rounded-2xl border border-burnt-orange bg-burnt-orange/5 px-4 py-4 text-left"
+                className="border-burnt-orange bg-burnt-orange/5 flex w-full items-center justify-between rounded-2xl border px-4 py-4 text-left"
               >
                 <span>
                   <span className="block text-sm font-semibold">Regular</span>
-                  <span className="mt-1 block text-xs text-text-muted">
-                    Standard serving
-                  </span>
+                  <span className="text-text-muted mt-1 block text-xs">Standard serving</span>
                 </span>
 
                 <span className="text-sm font-bold">{dish.price}</span>
@@ -171,13 +184,11 @@ const DishDetails = () => {
 
               <button
                 type="button"
-                className="flex w-full items-center justify-between rounded-2xl border border-border-light px-4 py-4 text-left"
+                className="border-border-light flex w-full items-center justify-between rounded-2xl border px-4 py-4 text-left"
               >
                 <span>
                   <span className="block text-sm font-semibold">Large</span>
-                  <span className="mt-1 block text-xs text-text-muted">
-                    Bigger portion
-                  </span>
+                  <span className="text-text-muted mt-1 block text-xs">Bigger portion</span>
                 </span>
 
                 <span className="text-sm font-bold">+ ₦6,000</span>
@@ -197,14 +208,9 @@ const DishDetails = () => {
 
         <section className="px-4 pb-12">
           <div className="mb-6 flex items-end justify-between gap-4">
-            <h2 className="font-serif text-[34px] leading-none">
-              You may also like
-            </h2>
+            <h2 className="font-serif text-[34px] leading-none">You may also like</h2>
 
-            <Link
-              to="/menu"
-              className="text-xs font-semibold text-burnt-orange"
-            >
+            <Link to="/menu" className="text-burnt-orange text-xs font-semibold">
               View all →
             </Link>
           </div>

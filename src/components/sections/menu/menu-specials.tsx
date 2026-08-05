@@ -4,14 +4,14 @@
   const MenuSpecials = () => {
     return (
       <section className="bg-warm-ivory px-4 py-8 text-text-primary">
-        <div className="flex items-end justify-between gap-4">
-          <h2 className="font-serif text-[34px] leading-none">
+        <div className="flex items-center justify-between gap-4">
+          <h2 className="font-serif text-[28px] font-semibold leading-none">
             Chef’s Specials
           </h2>
 
           <button
             type="button"
-            className="max-w-[120px] text-right text-xs font-semibold leading-5 text-burnt-orange"
+            className="max-w-[200px] text-right text-xs font-normal leading-5 text-burnt-orange"
           >
             What’s Chef’s Special? →
           </button>

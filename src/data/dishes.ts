@@ -1,9 +1,15 @@
+import menuDish1 from "../assets/img/menu-dish-1.png"
+import menuDish2 from "../assets/img/menu-dish-2.png"
+import menuDish3 from "../assets/img/menu-dish-3.png"
+import menuDish4 from "../assets/img/menu-dish-4.png"
+
 export const dishes = [
   {
     id: "wagyu-striploin",
     name: "Wagyu Striploin",
     category: "Chef’s Special",
     price: "₦38,500",
+    image: menuDish1,
     description:
       "Grilled striploin served with black garlic puree, roasted shallots, and red wine jus.",
     longDescription:
@@ -17,6 +23,7 @@ export const dishes = [
     id: "seared-scallops",
     name: "Seared Scallops",
     category: "Chef’s Special",
+    image: menuDish2,
     price: "₦24,000",
     description:
       "Pan-seared scallops with cauliflower puree, pancetta crisp, and lemon butter.",
@@ -32,6 +39,7 @@ export const dishes = [
     name: "Truffle Pappardelle",
     category: "Chef’s Special",
     price: "₦21,000",
+    image: menuDish3,
     description:
       "Fresh pasta ribbons with wild mushrooms, parmesan cream, and black truffle.",
     longDescription:
@@ -46,6 +54,7 @@ export const dishes = [
     name: "Miso Glazed Salmon",
     category: "Chef’s Special",
     price: "₦22,000",
+    image: menuDish4,
     description:
       "Glazed salmon with sesame greens, citrus rice, and a delicate miso finish.",
     longDescription:

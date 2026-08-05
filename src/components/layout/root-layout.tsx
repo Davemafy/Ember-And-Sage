@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import MobileHeader from "./mobile-header";
 import MobileDrawer from "./mobile-drawer";
 
@@ -10,12 +10,10 @@ const RootLayout = () => {
     <>
       <MobileHeader onMenuClick={() => setIsDrawerOpen(true)} />
 
-      <MobileDrawer
-        isOpen={isDrawerOpen}
-        onClose={() => setIsDrawerOpen(false)}
-      />
+      <MobileDrawer isOpen={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
 
       <Outlet />
+      <ScrollRestoration />
     </>
   );
 };

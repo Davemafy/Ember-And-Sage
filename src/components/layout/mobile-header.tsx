@@ -14,7 +14,7 @@ const MobileHeader = ({
   onMenuClick,
 }: MobileHeaderProps) => {
   return (
-    <header className="h-[85px] bg-near-black text-warm-ivory px-4 flex items-center justify-between">
+    <header className="h-[85px] sm:h-fit py-6 bg-near-black sm:bg-transparent text-warm-ivory sm:absolute top-0 left-0 z-10 w-full px-4 sm:px-16  flex items-center justify-between">
       <a href="/" className="font-serif text-[20px] sm:text-[25px] leading-none">
         Ember &amp; Sage
       </a>

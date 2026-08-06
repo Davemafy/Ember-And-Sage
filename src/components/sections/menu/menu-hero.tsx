@@ -1,4 +1,4 @@
-import menuBanner from "../../../assets/img/menu-banner.png";
+import menuBanner from "../../../assets/img/menu-banner.webp";
 
 const MenuHero = () => {
   return (
@@ -6,7 +6,7 @@ const MenuHero = () => {
       <img
         src={menuBanner}
         alt="Menu Banner"
-        className="bg-soft-black absolute top-0 left-0 -z-2 h-full w-full  object-cover"
+        className="bg-soft-black absolute top-0 left-0 -z-2 h-full w-full object-cover"
       />
 
       <div className="pointer-events-none absolute inset-0 -z-1 bg-gradient-to-b from-black via-black/50 to-transparent"></div>

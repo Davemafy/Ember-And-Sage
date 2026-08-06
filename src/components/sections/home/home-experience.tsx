@@ -1,6 +1,6 @@
 import QuoteIcon from "@/components/icons/quote-icon";
 import { ChefHat, Leaf, Star, Users } from "lucide-react";
-import guest1 from "@/assets/img/guest-1.png";
+import guest1 from "@/assets/img/guest-1.webp";
 
 const experiences = [
   {
@@ -69,13 +69,13 @@ const HomeExperience = () => {
             was perfect.”
           </h3>
           <div>
-            <div className="flex items-center gap-3 items-end">
+            <div className="flex items-center items-end gap-3">
               <img src={guest1} className="bg-text-primary h-10 w-10 rounded-full" alt="" />
               <div>
                 <p className="text-[13px] font-medium">Sophia M.</p>
                 <p className="text-xs text-gray-400">Loyal Guest</p>
               </div>
-              <div className="flex ml-auto gap-2">
+              <div className="ml-auto flex gap-2">
                 <Star size={13} fill="#d9471e" className="text-burnt-orange" />
                 <Star size={13} fill="#d9471e" className="text-burnt-orange" />
                 <Star size={13} fill="#d9471e" className="text-burnt-orange" />

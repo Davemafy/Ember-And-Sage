@@ -1,11 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import Button from "../../ui/button";
-import reserveTable from "@/assets/img/reserve-table.png";
+import reserveTable from "@/assets/img/reserve-table.webp";
 
 const MenuReservationCTA = () => {
   return (
     <section className="bg-warm-ivory text-text-primary isolate px-4 pb-6">
-      <div className="text-warm-ivory to-transparent relative overflow-clip rounded-xl bg-gradient-to-r from-black via-black/85 p-8">
+      <div className="text-warm-ivory relative overflow-clip rounded-xl bg-gradient-to-r from-black via-black/85 to-transparent p-8">
         <img
           src={reserveTable}
           alt="Fine dining table with candles and wine glasses"

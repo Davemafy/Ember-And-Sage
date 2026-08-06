@@ -1,7 +1,7 @@
-import menuDish1 from "../assets/img/menu-dish-1.png"
-import menuDish2 from "../assets/img/menu-dish-2.png"
-import menuDish3 from "../assets/img/menu-dish-3.png"
-import menuDish4 from "../assets/img/menu-dish-4.png"
+import menuDish1 from "../assets/img/menu-dish-1.webp"
+import menuDish2 from "../assets/img/menu-dish-2.webp"
+import menuDish3 from "../assets/img/menu-dish-3.webp"
+import menuDish4 from "../assets/img/menu-dish-4.webp"
 
 export const dishes = [
   {

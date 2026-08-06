@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../../ui/button";
 import { ArrowRight, Plus } from "lucide-react";
-import homeDish1 from "@/assets/img/home-dish-1.png";
+import homeDish1 from "@/assets/img/home-dish-1.webp";
 
 const dishes = [
   {
@@ -37,7 +37,7 @@ const HomeMenuPreview = () => {
 
       <div className="space-y-4">
         <div>
-          <img src={homeDish1} className="h-50 w-full rounded-xl bg-black" alt="Dish 1" />
+          <img src={homeDish1} className="h-50 w-full rounded-xl object-cover  bg-black" alt="Dish 1" />
           <div className="flex items-center justify-center gap-7">
             <div className="grid place-items-center gap-1 py-4">
               <h3 className="text-4xl font-medium">120+</h3>

@@ -1,6 +1,6 @@
 import Button from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import restaurantDining from "@/assets/img/restaurant-dining.png";
+import restaurantDining from "@/assets/img/restaurant-dining.webp";
 
 const HomeStory = () => {
   return (
@@ -20,7 +20,7 @@ const HomeStory = () => {
             and deeply considered. From the first welcome to the final course, every detail is
             shaped with care.
           </p>
-          <Button variant="text-link" className="gap-2 p-0 font-medium text-[13px]">
+          <Button variant="text-link" className="gap-2 p-0 text-[13px] font-medium">
             Learn Our Story <ArrowRight size={18} />
           </Button>
           <img
